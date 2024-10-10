@@ -44,7 +44,7 @@ public class DeleteServlet extends HttpServlet {
             //nạp điều kiện
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); 
             //thiết lập kết nối
-            con=DriverManager.getConnection("jdbc:sqlserver://PC313;databaseName=demodb","sa","sa");
+            con=DriverManager.getConnection("jdbc:sqlserver://PC314;databaseName=demodb","sa","sa");
             ps=con.prepareStatement("update users set (name,password,email,Country) values(?,?,?,?)");
             //truyền giá trị tham số cho câu lệnh truy vấn sql
             ps.setString(1, uname);
@@ -55,9 +55,9 @@ public class DeleteServlet extends HttpServlet {
             int kq=ps.executeUpdate();
 
                 if (kq > 0) {
-                    out.println("<h2>cập nhật  thành công</h2>");
+                    out.println("<h2>cập nhật thành công</h2>");
                 } else {
-                    out.println("<h2>cập nhật thất bại thất bại</h2>");
+                    out.println("<h2>cập nhật thất bại</h2>");
                 }
 
                 con.close();

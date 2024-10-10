@@ -14,11 +14,15 @@
     </servlet>
     <servlet>
         <servlet-name>processRequest</servlet-name>
-        <servlet-class>My.processRequest</servlet-class>
+        <servlet-class>My.Request</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>DeleteServlet</servlet-name>
         <servlet-class>My.DeleteServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateServlet</servlet-name>
+        <servlet-class>My.UpdateServlet</servlet-class>
     </servlet>
     <servlet-mapping>
         <servlet-name>SaveServlet</servlet-name>
@@ -39,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>DeleteServlet</servlet-name>
         <url-pattern>/DeleteServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateServlet</servlet-name>
+        <url-pattern>/UpdateServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

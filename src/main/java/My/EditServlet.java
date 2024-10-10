@@ -44,7 +44,7 @@ public class EditServlet extends HttpServlet {
 
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 
-                conn = DriverManager.getConnection("jdbc:sqlserver://pc313;databaseName=demodb", "sa", "sa");
+                conn = DriverManager.getConnection("jdbc:sqlserver://pc314;databaseName=demodb", "sa", "sa");
                 ps = conn.prepareStatement("select * from users where id=" + id);
 
                 rs = ps.executeQuery();

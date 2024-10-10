@@ -44,7 +44,7 @@ public class ViewServlet extends HttpServlet {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 System.out.println("Nap driver OK");
 
-                conn = DriverManager.getConnection("jdbc:sqlserver://pc313;databaseName=demodb", "sa", "sa");
+                conn = DriverManager.getConnection("jdbc:sqlserver://pc314;databaseName=demodb", "sa", "sa");
                 System.out.println("Ket noi thanh cong :)");
 
                 ps = conn.prepareStatement("select * from users");

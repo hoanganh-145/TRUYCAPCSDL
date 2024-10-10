@@ -45,7 +45,7 @@ public class SaveServlet extends HttpServlet {
             //nạp điều kiện
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver"); 
             //thiết lập kết nối
-            con=DriverManager.getConnection("jdbc:sqlserver://PC313;databaseName=demodb","sa","sa");
+            con=DriverManager.getConnection("jdbc:sqlserver://PC314;databaseName=demodb","sa","sa");
             ps=con.prepareStatement("insert into users(name,password,email,Country) values(?,?,?,?)");
             //truyền giá trị tham số cho câu lệnh truy vấn sql
             ps.setString(1, uname);

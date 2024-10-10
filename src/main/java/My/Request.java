@@ -18,7 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author ADMIN
  */
-public class processRequest extends HttpServlet {
+public class Request extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -42,7 +42,7 @@ public class processRequest extends HttpServlet {
                 Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
                 System.out.println("Nap driver OK");
 
-                conn = DriverManager.getConnection("jdbc:sqlserver://pc313;databaseName=demodb", "sa", "sa");
+                conn = DriverManager.getConnection("jdbc:sqlserver://pc314;databaseName=demodb", "sa", "sa");
                 System.out.println("Ket noi OK");
 
                 ps = conn.prepareStatement("update users set name=?, password=?,email=?, country=? where id=?");
